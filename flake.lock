@@ -1,39 +1,5 @@
 {
   "nodes": {
-    "libcamera-apps-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1713431793,
-        "narHash": "sha256-uoewZMGf3vsBoRDfRz8KBKl+J6st/J44SHvNRMBdaUI=",
-        "owner": "raspberrypi",
-        "repo": "libcamera-apps",
-        "rev": "414a7383464b98f21f5e5381a16cc73ae0350ba6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "raspberrypi",
-        "ref": "v1.4.4",
-        "repo": "libcamera-apps",
-        "type": "github"
-      }
-    },
-    "libcamera-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1713446223,
-        "narHash": "sha256-p0/inkHPRUkxSIsTmj7VI7sIaX7OXdqjMGZ31W7cnt4=",
-        "owner": "raspberrypi",
-        "repo": "libcamera",
-        "rev": "eb00c13d7c9f937732305d47af5b8ccf895e700f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "raspberrypi",
-        "repo": "libcamera",
-        "rev": "eb00c13d7c9f937732305d47af5b8ccf895e700f",
-        "type": "github"
-      }
-    },
     "libpisp-src": {
       "flake": false,
       "locked": {
@@ -69,8 +35,6 @@
     },
     "root": {
       "inputs": {
-        "libcamera-apps-src": "libcamera-apps-src",
-        "libcamera-src": "libcamera-src",
         "libpisp-src": "libpisp-src",
         "nixpkgs": "nixpkgs",
         "rpi-bluez-firmware-src": "rpi-bluez-firmware-src",

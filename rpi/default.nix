@@ -1,4 +1,4 @@
-{ pinned, core-overlay, libcamera-overlay }:
+{ pinned, core-overlay }:
 { lib, pkgs, config, ... }:
 
 let
@@ -25,16 +25,6 @@ in
           type = types.bool;
           description = ''
             Whether to run the migration service automatically or not.
-          '';
-        };
-      };
-      libcamera-overlay = {
-        enable = mkOption {
-          default = true;
-          type = types.bool;
-          description = ''
-            If enabled then the libcamera overlay is applied which
-            overrides libcamera with the rpi fork.
           '';
         };
       };
@@ -271,9 +261,7 @@ in
     };
 
     nixpkgs = {
-      overlays = [ core-overlay ]
-        ++ (if config.raspberry-pi-nix.libcamera-overlay.enable
-      then [ libcamera-overlay ] else [ ]);
+      overlays = [ core-overlay ];
     };
     boot = {
       initrd.availableKernelModules = [
